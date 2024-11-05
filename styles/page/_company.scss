@@ -1,0 +1,72 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+// 会社概要
+.company__contentWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 30px;
+  padding-bottom: 80px;
+  border-bottom: 14px solid var.$paleGreen;
+  @include set.mediaQuery(tab) {
+    flex-direction: column;
+  }
+}
+.company__list {
+  width: 12%;
+  @include set.mediaQuery(tab) {
+    width: 100%;
+  }
+}
+.company__text {
+  width: 60%;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 600;
+  line-height: 1.8;
+  text-align: justify;
+  @include set.mediaQuery(tab) {
+    width: 100%;
+  }
+}
+
+.company__item {
+  text-align: center;
+}
+.branchOffice__item {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid var.$paleBrown;
+  @include set.mediaQuery(pc) {
+    flex-direction: column;
+  }
+}
+.branchOffice__item:last-child {
+  border-bottom: 1px solid var.$paleBrown;
+}
+
+.branchOffice__head {
+  width: 30%;
+  border-right: 1px solid var.$paleBrown;
+  border-left: 1px solid var.$paleBrown;
+  padding: 32px 0 32px 24px;
+  background-color: var.$paleGreen;
+  color: var.$green;
+  @include set.mediaQuery(pc) {
+    padding: 16px 0 16px 24px;
+    width: 100%;
+  }
+}
+
+.branchOffice__foot {
+  width: 70%;
+  padding: 32px 0 32px 24px;
+  border-right: 1px solid var.$paleBrown;
+  @include set.mediaQuery(pc) {
+    width: 100%;
+    border-left: 1px solid var.$paleBrown;
+    padding: 16px 0 16px 24px;
+  }
+}

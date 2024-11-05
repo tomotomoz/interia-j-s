@@ -1,0 +1,33 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+// オーダー工房
+
+.order__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var.$mainColor;
+  margin-bottom: 8px;
+}
+
+.order__List {
+  width: 580px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.order__list,
+.order__title {
+  text-align: left;
+}
+.order__item {
+  padding: 24px 0 24px 24px;
+}
+.order__item:nth-of-type(even) {
+  background-color: var.$gray;
+}
+.order__item:nth-of-type(odd) {
+  background-color: var.$darkGray;
+  color: var.$white;
+}

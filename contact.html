@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <title>家具修理販売のインテリア工房J&amp;S</title>
+    <meta name="description" content="家具の修理・販売をしているインテリア工房J&Sです。
+    革張りソファ・チェアの修理・ ソファ・チェアの張替・ テーブルの塗装・修理・総桐たんすの修理・洗い・手織絨毯等の補修・クリーニング・各種「扉」の丁番取替修理
+など、その他「こんなもの直せますか？」とお気軽にご相談ください。当社では、旧（株）服部家具店でご購入いただいた家具のアフターサービス・メンテナンスは当社で承っております。" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/destyle.css@1.0.15/destyle.css"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200..900&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header id="header" class="header">
+      <div class="u-wrapperHeader">
+        <h1 class="header__logo">
+          <a href="index.html">
+            <img
+              src="img/logo/logo.png"
+              alt="家具修理販売のインテリア工房J&Sのロゴ"
+            />
+          </a>
+        </h1>
+
+        <!-- hamburgerMenu -->
+        <div class="hamburgerMenu">
+          <span class="hamburgerMenu__line"></span>
+          <span class="hamburgerMenu__line"></span>
+          <span class="hamburgerMenu__line"></span>
+        </div>
+
+        <div class="header__buttonContainer">
+          <a href="contact.html">
+            <img
+              class="c-buttonContactSmall"
+              src="img/arrow_btn/contactBtn.png"
+              alt="お問合せボタン"
+            />
+          </a>
+        </div>
+      </div>
+
+      <div class="header__navArea">
+        <nav class="header__nav">
+          <ul class="header__navList">
+            <li class="header__navItem"><a href="index.html">ホーム</a></li>
+            <li class="header__navItem"><a href="repair.html">修理工房</a></li>
+            <li class="header__navItem">
+              <a href="order.html">オーダー工房</a>
+            </li>
+
+            <li class="header__navItem">
+              <a href="fabric.html">ファブリック工房</a>
+            </li>
+            <li class="header__navItem"><a href="sale.html">家具販売</a></li>
+            <li class="header__navItem">
+              <a href="renovate.html">リフォーム</a>
+            </li>
+            <li class="header__navItem"><a href="company.html">会社概要</a></li>
+            <li class="header__navItem">
+              <a href="news.html">お知らせ</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- メイン -->
+    <main>
+      <section class="firstView">
+        <picture>
+          <img
+            class="firstView__img"
+            src="img/firstView/contactFirstView.jpg"
+            alt="家具修理・販売のインテリア工房J&Sのコンタクトページのファーストビューです"
+          />
+        </picture>
+        <h1
+          class="c-sectionTitle c-sectionBackground c-sectionBackgroundPaleGreen"
+        >
+          お問合せ
+        </h1>
+
+        <div class="c-bread">
+          <ul>
+            <li>ホーム</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="contact">
+        <div class="u-wrapper">
+          <div class="contact__wrapper">
+            <p class="contact__leadText">
+              修理・コーディネイト・ご購入などの、お見積、ご相談はお気軽にお問い合わせ下さい。
+            </p>
+
+            <div class="contact__tel">
+              <h2 class="c-title c-titleCenter">お電話</h2>
+              <a href="tel:058-201-6525" class="contact__btnArea">
+                <img
+                  class="contact__btnImg"
+                  src="img/contact/tel.png"
+                  alt="コンタクトページの電話アイコンです"
+                />
+
+                <div class="contact__buttonText">
+                  <p class="contact__number">(058) 201-6525</p>
+                  <p class="contact__businessHours">
+                    営業時間:10:00~17:00 定休日: 水・木
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact__form u-wrapper">
+          <h2 class="c-title c-titleCenter">お問合せフォーム</h2>
+          <p class="contact__leadText">
+            ※家具の使用年数、ご購入時の価格、またメーカー、サイズ等がわかればご入力ください。
+          </p>
+
+          <form action="" method="post">
+            <dl class="contact__formWrapper">
+              <dt class="contact__formTitle contact__formRequired">
+                <label for="name">お名前</label>
+              </dt>
+              <dd class="contact__formTextBox">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  autocomplete="given-name"
+                  required
+                />
+              </dd>
+
+              <dt class="contact__formTitle contact__formRequired">
+                <label for="address">ご住所</label>
+              </dt>
+              <dd class="contact__formTextBox">
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  autocomplete="given-name"
+                  required
+                />
+              </dd>
+
+              <dt class="contact__formTitle contact__formRequired">
+                <label for="email">メールアドレス</label>
+              </dt>
+              <dd class="contact__formTextBox">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  autocomplete="email"
+                  required
+                />
+              </dd>
+
+              <dt class="contact__formTitle contact__formRequired">
+                <label for="message">お問合せ内容</label>
+              </dt>
+              <dd class="contact__formTextBox">
+                <textarea
+                  class="contact__messageBox"
+                  id="message"
+                  name="message"
+                  required
+                ></textarea>
+              </dd>
+
+              <dt class="contact__formTitle">
+                <label for="yearsOfUse">使用年数</label>
+              </dt>
+              <dd class="contact__formTextBox">
+                <input type="text" id="yearsOfUse" name="yearsOfUse" />
+              </dd>
+
+              <dt class="contact__formTitle">
+                <label for="purchasePrice">購入価格</label>
+              </dt>
+              <dd class="contact__formTextBox">
+                <input type="text" id="purchasePrice" name="purchasePrice" />
+              </dd>
+
+              <dt class="contact__formTitle">
+                <label for="manufacturer">メーカー</label>
+              </dt>
+              <dd class="contact__formTextBox">
+                <input type="text" id="manufacturer" name="manufacturer" />
+              </dd>
+
+              <dt class="contact__formTitle">
+                <label for="size">サイズ</label>
+              </dt>
+              <dd class="contact__formTextBox">
+                <input type="text" id="size" name="size" />
+              </dd>
+
+              <dt class="contact__formTitle">
+                <span>写真添付</span>
+                <span class="contact__formTitleLead"
+                  >見積もりの参考になります。</span
+                >
+              </dt>
+
+              <dd class="contact__formTextBox contact__formAttachmentImgs">
+                <ul class="contact__formAttachmentList">
+                  <li class="contact__formAttachmentItem">ファイルを選択</li>
+                  <li class="contact__formAttachmentItem">ファイルを選択</li>
+                  <li class="contact__formAttachmentItem">ファイルを選択</li>
+                </ul>
+              </dd>
+            </dl>
+
+            <div class="contact__formButtonArea">
+              <button
+                class="contact__formButton"
+                id="confirm-btn"
+                type="submit"
+              >
+                確認する
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer u-wrapper">
+      <a class="c-toTopButton" href="#header">
+        <img src="img/arrow_btn/toTop.png" alt="トップへ戻るボタンです。" />
+      </a>
+      <div class="footer__logo">
+        <a href="index.html">
+          <img
+            src="img/logo/logo.png"
+            alt="家具修理販売のインテリア工房J&Sのロゴ"
+          />
+        </a>
+      </div>
+
+      <ul class="footer__navLIst">
+        <li class="footer__navItem">
+          <a href="fabric.html">ホーム</a>
+        </li>
+        <li class="footer__navItem">
+          <a href="repair.html">修理工房</a>
+        </li>
+        <li class="footer__navItem">
+          <a href="order.html">オーダー工房</a>
+        </li>
+        <li class="footer__navItem">
+          <a href="fabric.html">カーテン工房</a>
+        </li>
+        <li class="footer__navItem">
+          <a href="sale.html">家具販売</a>
+        </li>
+        <li class="footer__navItem">
+          <a href="renovate.html">リフォーム</a>
+        </li>
+        <li class="footer__navItem">
+          <a href="company.html">会社概要</a>
+        </li>
+        <li class="footer__navItem">
+          <a href="news.html">お知らせ</a>
+        </li>
+      </ul>
+
+      <div class="footer__banner">
+        <img
+          src="img/banner/footer_banner.jpg"
+          alt="家具修理販売のインテリア工房J&Sのバナー"
+        />
+      </div>
+
+      <p class="footer__copyright">
+        <small>
+          &copy; 2012 株式会社インテリア工房J&amp;S All Rights Reserved.
+        </small>
+      </p>
+    </footer>
+  </body>
+</html>

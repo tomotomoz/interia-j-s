@@ -1,0 +1,73 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+// 修理工房とオーダー工房の個別ページ（ビフォーアフター）
+// リフォームページでも使用
+
+.beforeAfter__wrapper {
+  max-width: 980px;
+  margin: 0 auto;
+  background-color: var.$white;
+  border-radius: 10px;
+  padding: 24px;
+  margin-bottom: 32px;
+  box-shadow: 0px 18px 18px -4px rgba(var.$black, 0.5);
+}
+.beforeAfter__contentArea {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  @include set.mediaQuery(tab) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.beforeAfter__Before,
+.beforeAfter__After {
+  width: 35%;
+  max-width: 100%;
+  @include set.mediaQuery(tab) {
+    width: 45%;
+  }
+  @include set.mediaQuery(sp) {
+    width: 100%;
+  }
+}
+.beforeAfter__arrow {
+  @include set.mediaQuery(tab) {
+    rotate: 90deg;
+  }
+}
+
+.beforeAfter__arrow {
+  flex-basis: 1;
+  align-self: center;
+}
+
+.beforeAfter__title {
+  font-size: 2rem;
+  border-bottom: 2px solid var.$green;
+  display: inline-block;
+  margin-bottom: 24px;
+  font-weight: 500;
+  @include set.mediaQuery(sp) {
+    font-size: 1.8rem;
+  }
+}
+.beforeAfter__text {
+  margin-bottom: 32px;
+}
+.beforeAfter__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.beforeAfter__itemTitle {
+  margin-bottom: 8px;
+}
+.beforeAfter__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}

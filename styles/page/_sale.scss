@@ -1,0 +1,144 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+// 家具販売
+.brand__itemWrapper {
+  display: flex;
+  align-items: center;
+}
+.brand__list {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 24px;
+  @include set.mediaQuery(tab) {
+    flex-direction: column;
+  }
+}
+.brand__listLeft,
+.brand__listRight {
+  width: 40%;
+  @include set.mediaQuery(tab) {
+    width: 100%;
+  }
+}
+
+.brand__img {
+  margin-right: 8px;
+}
+.brand__name {
+  color: var.$green;
+}
+.brand__item:not(:last-child) {
+  margin-bottom: 24px;
+  @include set.mediaQuery(sp) {
+    margin-bottom: 16px;
+  }
+}
+
+.introductionTicket__wrapper {
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+  font-weight: 700;
+  font-family: "Noto Serif JP", serif;
+  color: var.$mainColor;
+  background-color: var.$saleTicketBackground;
+  padding: 24px 40px;
+  position: relative;
+  @include set.mediaQuery(sp) {
+    padding: 16px 24px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    content: "";
+    height: 40px;
+    width: 40px;
+    aspect-ratio: cos(45deg);
+    clip-path: polygon(0 0, 100% 100%, 0 100%);
+    background: var.$red;
+    rotate: 270deg;
+  }
+}
+
+.introductionTicket__title {
+  border-bottom: 2px dashed var.$mainColor;
+  padding-bottom: 16px;
+  margin-bottom: 16px;
+
+  text-align: center;
+  @include set.mediaQuery(tab) {
+    font-size: 1.6rem;
+    line-height: 1.6;
+  }
+}
+.introductionTicket__titleTop {
+  display: block;
+  font-size: 1.8rem;
+}
+.introductionTicket__titleBottom {
+  font-size: 1.8rem;
+}
+.introductionTicket__text {
+  text-align: justify;
+  line-height: 1.8;
+  @include set.mediaQuery(sp) {
+    font-size: 1.4rem;
+  }
+}
+.introductionTicket__textRed {
+  color: var.$red;
+}
+.introductionTicket__textRedUnderLine {
+  border-bottom: 2px solid var.$red;
+}
+
+.saleLeadTextfoot__title {
+  display: inline-block;
+  margin-bottom: 24px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 800;
+}
+
+.saleLeadTextfoot {
+  color: var.$mainColor;
+  text-align: center;
+}
+.saleLeadTextfoot__title {
+  font-size: 3rem;
+  line-height: 2;
+  @include set.mediaQuery(tab) {
+    font-size: 2rem;
+    line-height: 1.7;
+  }
+  @include set.mediaQuery(sp) {
+    font-size: 1.8rem;
+  }
+}
+.saleLeadTextfoot__titleTop {
+  display: block;
+}
+.saleLeadTextfoot__text {
+  border-top: 2px solid var.$mainColor;
+  padding-top: 24px;
+  line-height: 1.8;
+  margin-bottom: 120px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  @include set.mediaQuery(tab) {
+    font-size: 1.4rem;
+  }
+  @include set.mediaQuery(sp) {
+    text-align: justify;
+  }
+}
+.saleLeadTextfoot__textBottom {
+  display: block;
+  @include set.mediaQuery(sp) {
+    display: inline;
+  }
+}

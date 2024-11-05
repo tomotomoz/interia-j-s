@@ -1,0 +1,157 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+// お問合せ
+.contact__wrapper {
+  border-bottom: 14px solid var.$paleGreen;
+  padding-bottom: 80px;
+}
+.contact__leadText {
+  text-align: center;
+  margin-bottom: 40px;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+  @include set.mediaQuery(sp) {
+    font-size: 1.4rem;
+  }
+}
+.contact__btnArea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  max-width: 360px;
+  margin: 0 auto;
+  border-radius: 40px;
+  padding: 8px 24px;
+  background-color: var.$mainColor;
+  transform: translateY(-5px);
+  &:hover {
+    transform: translateY(0);
+  }
+}
+.contact__btnImg {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+.contact__buttonText {
+  color: var.$white;
+}
+.contact__number {
+  font-size: 3rem;
+}
+.contact__businessHours {
+  font-size: 1.2rem;
+}
+
+.contact__formWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 16px;
+  max-width: 720px;
+  margin: 0 auto 24px;
+
+  @include set.mediaQuery(tab) {
+    flex-direction: column;
+    row-gap: 8px;
+  }
+}
+.contact__formTitle {
+  width: 25%;
+  font-weight: 500;
+  @include set.mediaQuery(tab) {
+    width: 100%;
+  }
+}
+.contact__formTitleLead {
+  font-size: 1.2rem;
+  letter-spacing: normal;
+  display: block;
+  color: var.$red;
+}
+.contact__formRequired {
+  &::after {
+    content: "必須";
+    font-size: 1rem;
+    color: var.$white;
+    background-color: var.$red;
+    border-radius: 5px;
+    padding: 2px 4px;
+  }
+}
+.contact__messageBox {
+  width: 100%;
+  height: 16rem;
+}
+.contact__formTextBox {
+  width: 75%;
+  border: 1px solid var.$paleBrown;
+  border-radius: 5px;
+  line-height: 1.8;
+  font-size: 1.4rem;
+  padding-left: 8px;
+  @include set.mediaQuery(tab) {
+    width: 100%;
+  }
+}
+.contact__formAttachmentImgs {
+  border: none;
+}
+.contact__formAttachmentList {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact__formAttachmentItem {
+  border: 1px solid var.$paleBrown;
+  width: 160px;
+  border-radius: 5px;
+  background-color: #eee;
+  color: var.$fontColor;
+  margin-left: 0;
+  padding-left: 8px;
+  cursor: pointer;
+}
+
+.contact__formAttachmentItem:not(:last-child) {
+  margin-bottom: 8px;
+}
+.contact__formButtonArea {
+  max-width: 720px;
+  margin: 0 auto;
+  text-align: right;
+  @include set.mediaQuery(sp) {
+    text-align: center;
+  }
+}
+.contact__formButton {
+  background-color: var.$mainColor;
+  display: inline-block;
+  // padding: 8px 32px;
+  width: 160px;
+  height: 48px;
+  text-align: center;
+  color: var.$white;
+  border-radius: 50px;
+  margin-bottom: 24px;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.contact__formButtonPrevious {
+  background-color: var.$white;
+  color: var.$mainColor;
+  border: 2px solid var.$mainColor;
+}
+
+.contact__formTextBoxConfirm {
+  border-bottom: 1px solid var.$paleBrown;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-radius: 0;
+}

@@ -1,0 +1,147 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+
+
+// 修理工房
+.repairContent__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 32px;
+  column-gap: 32px;
+  margin-bottom: 120px;
+
+  @include set.mediaQuery(tab) {
+    grid-template-columns: repeat(2, 1fr);
+    margin-bottom: 72px;
+  }
+}
+
+.repairContent__img {
+  width: 100%;
+  height: auto;
+  transition: 0.5s;
+  overflow: hidden;
+  margin-bottom: 8px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+
+  &:hover {
+    transform: scale(1.04);
+    transition: 0.5s;
+  }
+}
+
+.repairContent__briefExplain {
+  font-size: 1.4rem;
+}
+
+.price__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: "Noto Serif JP", serif;
+  color: var.$mainColor;
+  margin-bottom: 8px;
+}
+.price__table {
+  border: 2px solid var.$mainColor;
+  max-width: 640px;
+  width: 100%;
+  background-color: var.$paleGreen;
+}
+.price__row {
+  border: 1px solid var.$mainColor;
+}
+.price__priceTitle,
+.price__price {
+  border: 1px solid var.$mainColor;
+  padding: 3%;
+}
+
+.flow__underLine {
+  border-bottom: 7px solid var.$mainColor;
+  margin-bottom: 72px;
+  display: block;
+}
+.flow-list {
+  width: 640px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.flow__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid var.$paleBrown;
+  padding-bottom: 32px;
+  column-gap: 32px;
+
+  @include set.mediaQuery(tab) {
+    flex-direction: column;
+  }
+}
+.flow__number {
+  background-color: var.$green;
+  width: 56px;
+  height: 56px;
+  font-size: 1.8rem;
+  color: var.$white;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::after {
+    content: "・・・";
+    letter-spacing: -0.6rem;
+    color: var.$green;
+    position: absolute;
+    top: 60px;
+    transform: rotate(90deg);
+  }
+  @include set.mediaQuery(tab) {
+    margin-bottom: 56px;
+  }
+}
+.flow__img {
+  width: 64px;
+  @include set.mediaQuery(tab) {
+    margin-bottom: 24px;
+  }
+}
+.flow__textWrapper {
+  width: 70%;
+  color: var.$mainColor;
+}
+.flow__title {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 700;
+  font-size: 1.8rem;
+  @include set.mediaQuery(tab) {
+    text-align: center;
+  }
+}
+
+.repair {
+  text-align: center;
+}
+
+.repair__textLarge {
+  color: var.$red;
+  font-size: 4rem;
+  margin-bottom: 16px;
+  @include set.mediaQuery(tab) {
+    font-size: 3rem;
+  }
+  @include set.mediaQuery(sp) {
+    font-size: 2.5rem;
+  }
+}
+.repair__textSmall {
+  display: block;
+  margin-bottom: 88px;
+}

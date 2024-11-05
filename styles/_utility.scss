@@ -1,0 +1,40 @@
+@use "variables" as var;
+@use "setting" as set;
+
+.u-wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto 160px;
+  padding: 0 4%;
+
+  @include set.mediaQuery(tab) {
+    margin-bottom: 120px;
+  }
+  @include set.mediaQuery(sp) {
+    margin-bottom: 72px;
+  }
+}
+
+.u-wrapperRenovate{
+  max-width: 980px;
+  margin: 0 auto 160px;
+  padding: 0 4%;
+  @include set.mediaQuery(tab) {
+    margin-bottom: 120px;
+  }
+  @include set.mediaQuery(sp) {
+    margin-bottom: 72px;
+  }
+  }
+  
+.u-wrapperHeader {
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 4% 0 4%;
+  @include set.mediaQuery(pc) {
+    align-items: flex-start;
+    height: 105px;
+  }
+}

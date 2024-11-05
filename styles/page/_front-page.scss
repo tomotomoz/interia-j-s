@@ -1,0 +1,266 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+// ヘッダー・フッター以外のトップページのコンテンツ
+
+// news
+.news__list {
+  margin-bottom: 32px;
+}
+
+.news__item {
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid var.$paleBrown;
+}
+
+.news__time {
+  margin-right: 24px;
+}
+.news__text {
+  padding-top: 16px;
+}
+.news__category {
+  background-color: var.$mainColor;
+  color: var.$white;
+  padding: 2px 8px;
+  margin-right: 64px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+.blog__category {
+  background-color: var.$green;
+}
+
+.news__text {
+  display: inline-block;
+  line-height: 3;
+
+  @include set.mediaQuery(tab) {
+    display: block;
+    line-height: 1.6;
+  }
+}
+
+// newsButton
+.news__buttonArea {
+  text-align: right;
+}
+
+// service
+.service__hattoriLogoArea {
+  text-align: center;
+  border-bottom: 7px solid var.$mainColor;
+  margin-bottom: 96px;
+
+  @include set.mediaQuery(tab) {
+    margin-bottom: 48px;
+  }
+}
+
+.service__hattoriLogo {
+  width: 600px;
+  max-width: 100%;
+  margin-bottom: 16px;
+
+  @include set.mediaQuery(tab) {
+    width: 420px;
+    margin-bottom: 8px;
+  }
+}
+
+.service__list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 56px;
+  column-gap: 48px;
+  margin-bottom: 80px;
+}
+
+.service__item {
+  display: flex;
+  gap: 16px;
+  background-color: var.$white;
+  padding: 16px 16px 24px 16px;
+  width: 440px;
+  position: relative;
+  box-shadow: 0px 10px 10px -5px rgba(var.$black, 0.5);
+}
+
+.service__list:after {
+  content: "";
+  display: block;
+  width: 440px;
+  height: 0;
+}
+
+.service__imgArea {
+  width: 40%;
+  margin-bottom: 24px;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+.service__title {
+  border-bottom: 2px solid var.$paleBrown;
+  margin-bottom: 8px;
+  padding-bottom: 5px;
+  color: var.$mainColor;
+}
+
+.service__mainTitle {
+  font-family: "Noto Serif JP", serif;
+  font-weight: 900;
+}
+
+.service__subTitle {
+  display: block;
+  font-size: 1.3rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 800;
+}
+
+.service__wrapper {
+  width: 60%;
+}
+
+.service__text {
+  text-align: justify;
+  font-size: 1.4rem;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 700;
+
+  @include set.mediaQuery(sp) {
+    font-size: 1.3rem;
+  }
+}
+
+.service__bottomText {
+  text-align: center;
+  font-family: "Noto Serif JP", serif;
+  font-weight: 800;
+}
+
+// serviceButton
+.service__buttonArea {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: var.$mainColor;
+  display: block;
+  width: 100%;
+  height: auto;
+  text-align: right;
+}
+
+.service__button {
+  color: var.$white;
+  margin-right: 32px;
+  font-size: 1.4rem;
+  line-height: 2.2;
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px var.$white;
+    border-right: solid 2px var.$white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    transition: 0.3s;
+  }
+  &:hover::after {
+    right: 13px;
+  }
+}
+
+// concept
+.concept__inner {
+  width: 100%;
+  background-color: var.$mainColor;
+  background-image: url(/img/top/conceptBG.png);
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+  padding: 72px 80px;
+
+  @include set.mediaQuery(tab) {
+    padding: 32px;
+  }
+}
+
+.concept__content {
+  display: flex;
+  gap: 72px;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+
+  @include set.mediaQuery(pc) {
+    flex-direction: column;
+    gap: 32px;
+  }
+}
+
+.concept__text {
+  color: var.$white;
+  font-family: "Noto Serif JP", serif;
+  line-height: 2.5;
+  width: 40%;
+  text-align: justify;
+
+  @include set.mediaQuery(pc) {
+    width: 100%;
+    line-height: 2;
+  }
+}
+
+.concept__image {
+  width: 50%;
+
+  @include set.mediaQuery(pc) {
+    width: 100%;
+  }
+}
+
+// mediaFeature
+
+.mediaFeature__title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.mediaFeature__list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+
+  @include set.mediaQuery(tab) {
+    flex-direction: column;
+  }
+}
+
+.mediaFeature__item {
+  width: 40%;
+
+  @include set.mediaQuery(tab) {
+    width: 100%;
+  }
+
+  img {
+    width: 100%;
+    margin-bottom: 24px;
+
+    @include set.mediaQuery(tab) {
+      width: 100%;
+    }
+  }
+}

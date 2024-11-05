@@ -1,0 +1,12 @@
+$breakPoint: (
+  "sp": "screen and (max-width: 430px)",
+  "tab": "screen and (max-width: 720px)",
+  "pc": "screen and (max-width: 980px)",
+  "pcL": "screen and (max-width: 1200px)",
+);
+
+@mixin mediaQuery($bp) {
+  @media #{map-get($breakPoint, $bp)} {
+    @content;
+  }
+}

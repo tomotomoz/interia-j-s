@@ -1,0 +1,141 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+// ファブリック工房
+
+// カーテン
+.curtainContent__headWrapper {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+  @include set.mediaQuery(tab) {
+    gap: 0;
+  }
+}
+.curtainContent__left {
+  width: 40%;
+  @include set.mediaQuery(tab) {
+    width: auto;
+  }
+}
+
+.curtainContent__mainImg {
+  width: 100%;
+  @include set.mediaQuery(tab) {
+    display: none;
+  }
+}
+
+.curtainContent__right {
+  width: 60%;
+  @include set.mediaQuery(tab) {
+    width: 100%;
+  }
+}
+.curtainContent__headTitle {
+  border-bottom: 5px dashed var.$green;
+  margin-bottom: 32px;
+  font-size: 2.4rem;
+  line-height: 2;
+  @include set.mediaQuery(sp) {
+    font-size: 1.8rem;
+    margin-bottom: 24px;
+  }
+}
+
+.curtainContent__item {
+  font-size: 1.8rem;
+
+  &::before {
+    content: "◆";
+    color: var.$green;
+    margin-right: 5px;
+  }
+  @include set.mediaQuery(sp) {
+    font-size: 1.6rem;
+  }
+}
+.curtainContent__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+.curtainContent__foot {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  column-gap: 16px;
+  padding-bottom: 40px;
+  border-bottom: 5px dashed var.$green;
+  @include set.mediaQuery(tab) {
+    grid-template-columns: repeat(auto-fit, minmax(160px, 2fr));
+    // grid-template-columns: auto;
+    column-gap: 16px;
+    row-gap: 16px;
+  }
+}
+.curtainContent__footImg {
+  width: 100%;
+}
+// ベッドスプレッド・クッション
+.bedSpreadContent__wrapper,
+.cushionCoverContent__wrapper {
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  @include set.mediaQuery(tab) {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+}
+.bedSpreadContent__left,
+.cushionCoverContent__left {
+  flex-basis: 60%;
+  @include set.mediaQuery(tab) {
+    flex-basis: 100%;
+  }
+}
+.bedSpreadContent__right,
+.cushionCoverContent__right {
+  flex-basis: 40%;
+  height: auto;
+  @include set.mediaQuery(tab) {
+    flex-basis: 100%;
+  }
+}
+.cushionCoverContent__imgList {
+  display: flex;
+  width: 100%;
+  gap: 24px;
+}
+.bedSpreadContent__mainImg,
+.cushionCoverContent__mainImg {
+  width: 100%;
+  object-fit: cover;
+}
+.cushionCoverContent__eachImg {
+  width: 100%;
+  object-fit: cover;
+  width: 187px;
+  height: 134px;
+}
+.bedSpreadContent__img3Item {
+  max-width: 100%;
+  width: 406px;
+  height: 99px;
+}
+.bedSpreadContent__explain,
+.cushionCoverContent__explain {
+  margin-bottom: 48px;
+  line-height: 1.8;
+}
+
+.fabricContactBtnArea {
+  text-align: center;
+}
+.fabricContactBtnArea__lead {
+  margin-bottom: 88px;
+}
+.fabricContactBtnArea__head {
+  display: block;
+}

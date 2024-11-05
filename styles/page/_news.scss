@@ -1,0 +1,67 @@
+@use "../variables" as var;
+@use "../setting" as set;
+@use "../component";
+@use "../utility";
+
+// お知らせ
+.news__button {
+  background-color: var.$mainColor;
+  color: var.$white;
+  padding: 8px 24px 8px 16px;
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+  border-radius: 5px;
+  position: relative;
+  &::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-top: solid 2px var.$white;
+    border-right: solid 2px var.$white;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 15px;
+    right: 10px;
+  }
+}
+.news__buttonGreen {
+  background-color: var.$green;
+}
+
+.news__buttonWrapper {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 64px;
+  gap: 8px;
+}
+
+.news__pageNumbers {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+// singleNews
+.singleNews__wrapper {
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto 24px;
+  padding: 0 4%;
+}
+
+.singleNews__time {
+  border-bottom: 2px solid var.$mainColor;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+.singleNews__text {
+  margin-bottom: 32px;
+}
+.singleNews__img {
+  width: 100%;
+}
+.singleNews__pagenation {
+  display: flex;
+  justify-content: space-between;
+}
